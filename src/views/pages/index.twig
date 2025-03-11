@@ -1,14 +1,21 @@
-{#
-| Variable         | Type       | Description                                                         |
-|------------------|------------|---------------------------------------------------------------------|
-| page             | object     |                                                                     |
-| page.title       | string     | *could be html                                                      |
-| page.slug        | string     | ex: "cat.show"                                                      |
-#}
 {% extends "layouts.master" %}
+
 {% block content %}
-    {% component home %}
+    {% include 'components/home/enhanced-slider.twig' %}
+    {% include 'components/home/featured-products-style1.twig' %}
+    {% include 'components/home/featured-products-style2.twig' %}
+    {% include 'components/home/featured-products-style3.twig' %}
+    {% include 'components/home/latest-products.twig' %}
+    {% include 'components/home/brands.twig' %}
+    {% include 'components/home/fixed-banner.twig' %}
+    {% include 'components/home/fixed-products.twig' %}
+    {% include 'components/home/main-links.twig' %}
+    {% include 'components/home/parallax-background.twig' %}
+    {% include 'components/home/photos-slider.twig' %}
+    {% include 'components/home/store-features.twig' %}
+    {% include 'components/home/testimonials.twig' %}
 {% endblock %}
+
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
 {% endblock %}
